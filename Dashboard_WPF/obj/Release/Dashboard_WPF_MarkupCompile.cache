@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\
+C:\Users\antou\Source\Repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Release\
 Dashboard_WPF
 none
 false
-DEBUG;TRACE
-C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
+TRACE
+C:\Users\antou\Source\Repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
 111195978410
 
-162141488741
-151756451187
+15219710620
+15-177402573
 MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\VPVentas.xaml;
 
 True
