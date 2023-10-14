@@ -29,6 +29,7 @@ namespace Dashboard_WPF.Views.Dashboard
     /// </summary>
     public partial class PDashboard : Page
     {
+        //WIIIII
         public Frame mainFrame;
 
         VPCategoria vpCategorias = new VPCategoria();

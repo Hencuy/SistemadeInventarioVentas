@@ -32,6 +32,7 @@ namespace Dashboard_WPF
     public partial class MainWindow : Window
     {
         //Holaaaaaaaaaaaaaaaaa
+        //HOla marco
         VPCategoria vpCategorias = new VPCategoria();
         VPClientes vpClientes = new VPClientes();
         VPCompras vpCompras = new VPCompras();
