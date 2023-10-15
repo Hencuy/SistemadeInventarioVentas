@@ -85,3 +85,9 @@ D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\
 D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Reportes\VPReportes.baml
 D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Usuarios\VPUsuarios.baml
 D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Ventas\VPVentas.baml
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores1.g.cs
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores1.baml
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores2.g.cs
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores3.g.cs
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores2.baml
+D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\obj\Debug\Views\Proveedores\SubVProveedores3.baml

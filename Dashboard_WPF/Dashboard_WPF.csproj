@@ -82,6 +82,15 @@
     <Compile Include="Views\Productos\VPProductos.xaml.cs">
       <DependentUpon>VPProductos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Proveedores\SubVProveedores1.xaml.cs">
+      <DependentUpon>SubVProveedores1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proveedores\SubVProveedores2.xaml.cs">
+      <DependentUpon>SubVProveedores2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proveedores\SubVProveedores3.xaml.cs">
+      <DependentUpon>SubVProveedores3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Proveedores\VPProveedores.xaml.cs">
       <DependentUpon>VPProveedores.xaml</DependentUpon>
     </Compile>
@@ -127,6 +136,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Productos\VPProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Proveedores\SubVProveedores1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Proveedores\SubVProveedores2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Proveedores\SubVProveedores3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

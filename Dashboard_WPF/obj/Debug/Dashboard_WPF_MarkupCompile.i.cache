@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\4to Semestre\Proyecto Sistemas I\Dashboard_WPF\Dashboard_WPF\App.xaml
-111195978410
+141114372396
 
-162141488741
+19520617247
 151591792737
-MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\VPVentas.xaml;
+MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\SubVProveedores1.xaml;Views\Proveedores\SubVProveedores2.xaml;Views\Proveedores\SubVProveedores3.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\VPVentas.xaml;
 
-False
+True
 
