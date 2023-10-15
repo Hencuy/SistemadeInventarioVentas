@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\antou\Source\Repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
-111195978410
+141114372396
 
-15219710620
+18-1401160874
 15-177402573
-MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\VPVentas.xaml;
+MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\SubVProveedores1.xaml;Views\Proveedores\SubVProveedores2.xaml;Views\Proveedores\SubVProveedores3.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\VPVentas.xaml;
 
 True
 
