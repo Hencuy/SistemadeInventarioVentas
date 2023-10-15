@@ -70,6 +70,18 @@
     <Compile Include="Views\Clientes\VPClientes.xaml.cs">
       <DependentUpon>VPClientes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Compras\SubVCompras1.xaml.cs">
+      <DependentUpon>SubVCompras1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compras\SubVCompras2.xaml.cs">
+      <DependentUpon>SubVCompras2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compras\SubVCompras3.xaml.cs">
+      <DependentUpon>SubVCompras3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Compras\VEmergente.xaml.cs">
+      <DependentUpon>VEmergente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Compras\VPCompras.xaml.cs">
       <DependentUpon>VPCompras.xaml</DependentUpon>
     </Compile>
@@ -156,9 +168,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Compras\VPCompras.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\Compras\SubVCompras1.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Compras\SubVCompras2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Compras\SubVCompras3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Compras\VEmergente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Compras\VPCompras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Dashboard\PDashboard.xaml">
       <SubType>Designer</SubType>
