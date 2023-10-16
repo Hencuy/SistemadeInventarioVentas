@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dashboard_WPF.Views.Proveedores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,7 @@ namespace Dashboard_WPF.Views.Ventas
         public VPVentas()
         {
             InitializeComponent();
+            FrameProveedores.NavigationService.Navigate(subVVentas1);
         }
 
         private void btnRegistrarVenta_Click(object sender, RoutedEventArgs e)

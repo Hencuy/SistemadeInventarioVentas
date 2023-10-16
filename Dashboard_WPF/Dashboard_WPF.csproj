@@ -97,6 +97,15 @@
     <Compile Include="Views\Dashboard\PDashboard.xaml.cs">
       <DependentUpon>PDashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Kardex\SubVKardex1.xaml.cs">
+      <DependentUpon>SubVKardex1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kardex\SubVKardex2.xaml.cs">
+      <DependentUpon>SubVKardex2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kardex\SubVKardex3.xaml.cs">
+      <DependentUpon>SubVKardex3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Kardex\VPKardex.xaml.cs">
       <DependentUpon>VPKardex.xaml</DependentUpon>
     </Compile>
@@ -210,6 +219,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Dashboard\PDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kardex\SubVKardex1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kardex\SubVKardex2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kardex\SubVKardex3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
