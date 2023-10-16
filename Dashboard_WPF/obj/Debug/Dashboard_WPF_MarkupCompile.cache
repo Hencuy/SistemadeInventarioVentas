@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\
+C:\Users\nogal\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\
 Dashboard_WPF
 none
 false
 DEBUG;TRACE
-C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
-29-1029357842
+C:\Users\nogal\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
+32936644177
 
-33853984480
-151756451187
-MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\SubVCompras1.xaml;Views\Compras\SubVCompras2.xaml;Views\Compras\SubVCompras3.xaml;Views\Compras\VEmergente.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\Sub_BuscarProducto.xaml;Views\Productos\Sub_EnAlmacen.xaml;Views\Productos\Sub_MasVendido.xaml;Views\Productos\Sub_NuevoProducto.xaml;Views\Productos\Sub_PorCategorias.xaml;Views\Productos\Sub_PorVencimiento.xaml;Views\Productos\Sub_StockMinimo.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\SubVProveedores1.xaml;Views\Proveedores\SubVProveedores2.xaml;Views\Proveedores\SubVProveedores3.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\SubVVentas1.xaml;Views\Ventas\SubVVentas2.xaml;Views\Ventas\SubVVentas3.xaml;Views\Ventas\SubVVentas4.xaml;Views\Ventas\VPVentas.xaml;
+36-94215859
+15-1609141987
+MainWindow.xaml;Views\Categorias\subVCategoraias1.xaml;Views\Categorias\subVCategoraias2.xaml;Views\Categorias\subVCategoraias3.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\SubVCompras1.xaml;Views\Compras\SubVCompras2.xaml;Views\Compras\SubVCompras3.xaml;Views\Compras\VEmergente.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\Sub_BuscarProducto.xaml;Views\Productos\Sub_EnAlmacen.xaml;Views\Productos\Sub_MasVendido.xaml;Views\Productos\Sub_NuevoProducto.xaml;Views\Productos\Sub_PorCategorias.xaml;Views\Productos\Sub_PorVencimiento.xaml;Views\Productos\Sub_StockMinimo.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\SubVProveedores1.xaml;Views\Proveedores\SubVProveedores2.xaml;Views\Proveedores\SubVProveedores3.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\SubVVentas1.xaml;Views\Ventas\SubVVentas2.xaml;Views\Ventas\SubVVentas3.xaml;Views\Ventas\SubVVentas4.xaml;Views\Ventas\VPVentas.xaml;
 
 False
 
