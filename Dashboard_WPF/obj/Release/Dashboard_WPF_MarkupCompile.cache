@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF\obj\Release\
+C:\Users\antou\Source\Repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Release\
 Dashboard_WPF
 none
 false
 TRACE
-D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
+C:\Users\antou\Source\Repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\App.xaml
 29-1029357842
 
 33853984480
-151773054943
+15-177402573
 MainWindow.xaml;Views\Categorias\VPCategoria.xaml;Views\Clientes\VPClientes.xaml;Views\Compras\SubVCompras1.xaml;Views\Compras\SubVCompras2.xaml;Views\Compras\SubVCompras3.xaml;Views\Compras\VEmergente.xaml;Views\Compras\VPCompras.xaml;Views\Dashboard\PDashboard.xaml;Views\Kardex\VPKardex.xaml;Views\Productos\Sub_BuscarProducto.xaml;Views\Productos\Sub_EnAlmacen.xaml;Views\Productos\Sub_MasVendido.xaml;Views\Productos\Sub_NuevoProducto.xaml;Views\Productos\Sub_PorCategorias.xaml;Views\Productos\Sub_PorVencimiento.xaml;Views\Productos\Sub_StockMinimo.xaml;Views\Productos\VPProductos.xaml;Views\Proveedores\SubVProveedores1.xaml;Views\Proveedores\SubVProveedores2.xaml;Views\Proveedores\SubVProveedores3.xaml;Views\Proveedores\VPProveedores.xaml;Views\Reportes\VPReportes.xaml;Views\Usuarios\VPUsuarios.xaml;Views\Ventas\SubVVentas1.xaml;Views\Ventas\SubVVentas2.xaml;Views\Ventas\SubVVentas3.xaml;Views\Ventas\SubVVentas4.xaml;Views\Ventas\VPVentas.xaml;
 
 True

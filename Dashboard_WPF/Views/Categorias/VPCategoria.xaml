@@ -8,6 +8,7 @@
       d:DesignHeight="670" d:DesignWidth="950"
       Title="VPCategoria">
 
+    
     <Border Name="Page1" CornerRadius="15" Background="#EFF2F7" Height="610" Width="880">
         <TextBlock FontSize="70" VerticalAlignment="Center" HorizontalAlignment="Center" >Vista Principal Categorias</TextBlock>
     </Border>

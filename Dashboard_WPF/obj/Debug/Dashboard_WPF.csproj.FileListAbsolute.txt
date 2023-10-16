@@ -303,3 +303,19 @@ D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF
 D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Dashboard_WPF.csproj.CopyComplete
 D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Dashboard_WPF.exe
 D:\4to Semestre\Proyecto Sistemas I\weas\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Dashboard_WPF.pdb
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras1.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras2.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras3.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\VEmergente.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas1.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas2.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas3.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas4.g.cs
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras1.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras2.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\SubVCompras3.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Compras\VEmergente.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas1.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas2.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas3.baml
+C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Ventas\SubVVentas4.baml
