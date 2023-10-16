@@ -145,6 +145,15 @@
     <Compile Include="Views\Proveedores\VPProveedores.xaml.cs">
       <DependentUpon>VPProveedores.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Reportes\SubVReportes1.xaml.cs">
+      <DependentUpon>SubVReportes1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\SubVReportes2.xaml.cs">
+      <DependentUpon>SubVReportes2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reportes\SubVReportes3.xaml.cs">
+      <DependentUpon>SubVReportes3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reportes\VPReportes.xaml.cs">
       <DependentUpon>VPReportes.xaml</DependentUpon>
     </Compile>
@@ -283,6 +292,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Proveedores\VPProveedores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Reportes\SubVReportes1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Reportes\SubVReportes2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Reportes\SubVReportes3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

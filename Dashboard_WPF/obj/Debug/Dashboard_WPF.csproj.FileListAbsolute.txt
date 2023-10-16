@@ -423,3 +423,9 @@ C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Vi
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Kardex\SubVKardex1.baml
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Kardex\SubVKardex2.baml
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Kardex\SubVKardex3.baml
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes1.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes2.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes3.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes1.baml
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes2.baml
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes3.baml
