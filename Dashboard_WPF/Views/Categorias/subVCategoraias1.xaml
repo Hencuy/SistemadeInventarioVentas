@@ -12,28 +12,39 @@
     <Grid Background="White" Height="420" Width="870" >
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="140"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,0,0,0">
             <materialDesign:PackIcon Height="35" Width="35" Kind="InformationCircleOutline" VerticalAlignment="Center" Margin="7 0 0 0"/>
             <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Información de la categoría</TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
             <StackPanel Margin="30 0 0 0">
                 <StackPanel Orientation="Vertical">
-                    <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre categoría</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre categoría</TextBlock>
+                        <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
+                    </StackPanel>
                     <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
-                </StackPanel>
-                <StackPanel Orientation="Vertical" Margin="0,40,0,0">
-                    <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Estado de la categoría</TextBlock>
-                    <ComboBox></ComboBox>
                 </StackPanel>
             </StackPanel>
             <StackPanel Margin="20 0 0 0" Orientation="Vertical">
                 <StackPanel Orientation="Vertical">
-                    <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Pasillo o ubicación del producto</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Pasillo o ubicación del producto</TextBlock>
+                        <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
+                    </StackPanel>
                     <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="20 0 0 0" Orientation="Vertical">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Estado de la categoría</TextBlock>
+                        <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
+                    </StackPanel>
+                    <ComboBox Foreground="Black" Width="260" Margin="0 7 0 0"></ComboBox>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

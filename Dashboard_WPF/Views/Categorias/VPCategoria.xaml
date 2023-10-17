@@ -18,19 +18,21 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <materialDesign:PackIcon Height="35" Width="35" Kind="TruckFast" VerticalAlignment="Center" Margin="20 0 0 0"/>
+                <materialDesign:PackIcon Height="35" Width="35" Kind="LabelMultiple" VerticalAlignment="Center" Margin="20 0 0 0"/>
                 <TextBlock  VerticalAlignment="Center" FontSize="25" Margin="20 0 0 0" FontFamily="Verdana">CATEGORIAS</TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <TextBlock Margin="20 0 0 0" TextWrapping="Wrap" Width="850" >
-                En el modulo PROVEEDORES usted podra registra los proveedores de productos o mercancia.Ademas, podra actualizar los
-                datos de los proveedores, ver todos los proveedores registrados en el sistemas,buscar proveedores en el sistema o eliminarlos si asi desea.
+                <TextBlock Margin="5 0 0 0" TextWrapping="Wrap" Width="870" >
+                    En el módulo CATEGORÍA usted podrá registrar las categorías que servirán para agregar 
+                    productos y también podrá ver los productos que pertenecen a una categoría 
+                    determinada. Además de lo antes mencionado, puede actualizar los datos de las 
+                    categorías, realizar búsquedas de categorías o eliminarlas si así lo desea.
                 </TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button x:Name="C1"  Margin="0 0 0 0" Cursor="Hand" Click="C1_Click" >
                     <WrapPanel>
-                        <materialDesign:PackIcon Kind="TruckFast" VerticalAlignment="Center" Margin="0 0 7 0"/>
+                        <materialDesign:PackIcon Kind="LabelMultiple" VerticalAlignment="Center" Margin="0 0 7 0"/>
                         <TextBlock FontSize="14">Nueva categoria</TextBlock>
                     </WrapPanel>
                 </Button>

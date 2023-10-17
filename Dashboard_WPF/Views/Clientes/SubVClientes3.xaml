@@ -6,12 +6,12 @@
       xmlns:local="clr-namespace:Dashboard_WPF.Views.Clientes"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="420" d:DesignWidth="870"
       Title="subVClientes3">
 
     <Grid Background="White" Height="420" Width="870">
         <StackPanel Background="#F9F5F6" Height="200" Margin="0,37,0,183" Orientation="Vertical">
-            <TextBlock FontSize="14" HorizontalAlignment="Center">¿Que categoría estas buscando?</TextBlock>
+            <TextBlock FontSize="14" HorizontalAlignment="Center">¿Qué cliente estas buscando?</TextBlock>
             <TextBox Foreground="Black" Width="400" Margin="0 30 0 0"></TextBox>
             <Button Margin="0 40 0 0" Width="150">
                 <WrapPanel>

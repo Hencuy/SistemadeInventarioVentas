@@ -5,6 +5,9 @@ FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Categ
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Categorias\subVCategoraias2.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Categorias\subVCategoraias3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Categorias\VPCategoria.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes1.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes2.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\VPClientes.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Compras\SubVCompras1.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Compras\SubVCompras2.xaml;;
@@ -12,6 +15,9 @@ FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Compr
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Compras\VEmergente.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Compras\VPCompras.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Dashboard\PDashboard.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex1.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex2.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\VPKardex.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Productos\Sub_BuscarProducto.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Productos\Sub_EnAlmacen.xaml;;
@@ -25,6 +31,9 @@ FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Prove
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Proveedores\SubVProveedores2.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Proveedores\SubVProveedores3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Proveedores\VPProveedores.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes1.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes2.xaml;;
+FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\VPReportes.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Usuarios\VPUsuarios.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Ventas\SubVVentas1.xaml;;
@@ -32,13 +41,4 @@ FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Venta
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Ventas\SubVVentas3.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Ventas\SubVVentas4.xaml;;
 FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Ventas\VPVentas.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex1.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex2.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Kardex\SubVKardex3.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes1.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes2.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Reportes\SubVReportes3.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes1.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes2.xaml;;
-FC:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\Views\Clientes\SubVClientes3.xaml;;
 

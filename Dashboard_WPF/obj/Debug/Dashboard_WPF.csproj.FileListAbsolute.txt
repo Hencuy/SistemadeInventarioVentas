@@ -162,7 +162,6 @@ C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\bin\Debug\Ma
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Dashboard_WPF.csproj.AssemblyReference.cache
-C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Dashboard_WPF.csproj.SuggestedBindingRedirects.cache
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\MainWindow.g.cs
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Categorias\VPCategoria.g.cs
 C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Clientes\VPClientes.g.cs

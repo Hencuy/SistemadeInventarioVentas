@@ -23,13 +23,11 @@
         <DataGrid>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" Width="40" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Documento" Width="130" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Nombre" Width="150" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Estado" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Ciudad" Width="150" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Telefono" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Actualizar" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Eliminar" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="Documento" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="Nombre" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="Telefono" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="Actualizar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="Eliminar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
