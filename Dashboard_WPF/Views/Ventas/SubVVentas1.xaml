@@ -4,23 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Dashboard_WPF.Views.Ventas"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      xmlns:Icon="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Material"
       mc:Ignorable="d" 
       d:DesignHeight="420" d:DesignWidth="870"
       Title="SubVVentas1">
-    <Page.Resources>
-        <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
-            <Setter Property="Background" Value="#2D4356"/>
-            <!-- Cambia "ColorDeFondoDeseado" al color que desees -->
-            <Setter Property="Foreground" Value="White"/>
-            <!-- Cambia "Blanco" al color de fuente que desees -->
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        </Style>
-
-    </Page.Resources>
+    
     <Grid Background="#EFF2F7" Height="420" Width="870" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="570"/>
+            <ColumnDefinition Width="600"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -31,12 +23,12 @@
             <StackPanel Background="#EFF2F7"  Orientation="Horizontal">
                 <Button Width="160" Background="Transparent" BorderBrush="Transparent">
                     <WrapPanel>
-                        <materialDesign:PackIcon Kind="Magnify" VerticalAlignment="Center" Margin="0 0 7 0" Foreground="#009688"/>
-                        <TextBlock FontSize="14" Foreground="#009688">Buscar Producto</TextBlock>
+                        <materialDesign:PackIcon Kind="Magnify" VerticalAlignment="Center" Margin="0 0 7 0" Foreground="Green"/>
+                        <TextBlock FontSize="14" Foreground="Green">Buscar Producto</TextBlock>
                     </WrapPanel>
                 </Button>
-                <TextBox Foreground="Black" Width="250" Height="30" Margin="10 0 10 0"></TextBox>
-                <Button Width="120">
+                <TextBox Foreground="Black" Width="250" Height="30" Margin="10 0 10 0" Name="TbCodigoBarras"></TextBox>
+                <Button Width="120" Name="BtnAgregarProd" Click="BtnAgregarProd_Click">
                     <WrapPanel>
                         <materialDesign:PackIcon Kind="PlusCircle" VerticalAlignment="Center" Margin="0 0 7 0"/>
                         <TextBlock FontSize="14">Agregar</TextBlock>
@@ -44,16 +36,96 @@
                 </Button>
             </StackPanel>
             <Grid Background="White" Grid.Row="1">
-                <DataGrid>
+                <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" Name="ProdAgreg">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="#" Width="40" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Código de barra" Width="95" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Producto" Width="90" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Cantidad" Width="65" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Precio" Width="80" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Subtotal" Width="80" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Actualizar" Width="60" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Eliminar" Width="60" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                        
+                        <DataGridTemplateColumn  Header="#" IsReadOnly="True" CanUserResize="False" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Codigo de Barra" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding CodigoBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Producto" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Producto}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Cantidad" IsReadOnly="True" CanUserResize="False" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBox Text="{Binding Cantidad}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Precio" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Precio}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="SubTotal" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding SubTotal}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        
+
+                        <DataGridTemplateColumn Header="Remover" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0  0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2" >
+                                            <Button  Style="{StaticResource gridEditButton}" Background="Transparent">
+                                                <Icon:PackIconMaterial Kind="More" Height="25" Width="25"  Foreground="White" />
+                                            </Button>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
@@ -79,11 +151,16 @@
                 </StackPanel>
                 <TextBox Foreground="Black" Width="260" Height="23" Margin="0 0 0 0"></TextBox>
             </StackPanel>
-            <StackPanel Margin="0 0 0 0" Grid.Row="2">
-                <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
-                    <TextBlock VerticalAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Verdana">Cliente</TextBlock>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <StackPanel Margin="0 0 7 0" >
+                    <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                        <TextBlock VerticalAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Verdana">Cliente</TextBlock>
+                    </StackPanel>
+                    <TextBox Foreground="Black" Width="200" Height="23" Margin="7 0 0 0"></TextBox>
                 </StackPanel>
-                <TextBox Foreground="Black" Width="260" Height="23" Margin="0 0 0 0"></TextBox>
+                <Button Margin="0 0 0 0" Height="20">
+                    <materialDesign:PackIcon Kind="ContentSaveCheck" VerticalAlignment="Center" Margin="0 0 0 0"/>
+                </Button>
             </StackPanel>
             <StackPanel Margin="0 0 0 0" Grid.Row="3">
                 <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
