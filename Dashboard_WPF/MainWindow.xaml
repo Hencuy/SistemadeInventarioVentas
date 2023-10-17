@@ -59,12 +59,13 @@
                         </WrapPanel>
                     </Button>
 
-                    <Button x:Name="btnUsuarios" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnUsuarios_Click" Cursor="Hand">
+                    <!--<Button x:Name="btnUsuarios" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnUsuarios_Click" Cursor="Hand">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Usuarios</TextBlock>
                         </WrapPanel>
-                    </Button>
+                    </Button>-->
+                    
                     <Button x:Name="btnClientes" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnClientes_Click">
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="AccountGroup" VerticalAlignment="Center" Margin="0 0 20 0"/>

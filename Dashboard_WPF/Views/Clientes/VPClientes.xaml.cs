@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dashboard_WPF.Views.Categorias;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,28 @@ namespace Dashboard_WPF.Views.Clientes
     /// </summary>
     public partial class VPClientes : Page
     {
+        SubVClientes1 subVClientes1 = new SubVClientes1();
+        SubVClientes2 subVClientes2 = new SubVClientes2();
+        SubVClientes3 subVClientes3 = new SubVClientes3();
         public VPClientes()
         {
             InitializeComponent();
+            FrameClientes.NavigationService.Navigate(subVClientes1);
+        }
+
+        private void CL1_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClientes.NavigationService.Navigate(subVClientes1);
+        }
+
+        private void CL2_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClientes.NavigationService.Navigate(subVClientes2);
+        }
+
+        private void CL3_Click(object sender, RoutedEventArgs e)
+        {
+            FrameClientes.NavigationService.Navigate(subVClientes3);
         }
     }
 }

@@ -1,0 +1,136 @@
+﻿<Page x:Class="Dashboard_WPF.Views.Clientes.SubVClientes1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dashboard_WPF.Views.Clientes"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="710" d:DesignWidth="880"
+      Title="subVClientes1">
+
+    <Border Name="Page1" CornerRadius="15" Background="#EFF2F7" Height="710" Width="880">
+        <Grid Background="White" Height="710" Width="810" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <materialDesign:PackIcon Height="35" Width="35" Kind="InformationCircleOutline" VerticalAlignment="Center" Margin="7 0 0 0"/>
+                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Información del Personal</TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" Height="350" VerticalAlignment="Top">
+                <!-- A -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Width="768">
+                    <StackPanel Margin="0 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 7 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="40 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Stock mínimo</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- A -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0" Width="768">
+                    <StackPanel Margin="0 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 7 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="40 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Stock mínimo</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <materialDesign:PackIcon Height="35" Width="35" Kind="CalendarAlertOutline" VerticalAlignment="Center" Margin="7 0 0 0"/>
+                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Informacion de Residencia</TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                    <StackPanel Margin="0 0 0 0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Proveedor</TextBlock>
+                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="40 0 0 0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Categoría</TextBlock>
+                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="40 0 0 0">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Estado del producto</TextBlock>
+                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <materialDesign:PackIcon Height="35" Width="35" Kind="Store" VerticalAlignment="Center" Margin="7 0 0 0"/>
+                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Informacion de  Contacto</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="5">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Width="768">
+                    <StackPanel Margin="0 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 7 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="40 0 0 0">
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Stock mínimo</TextBlock>
+                            <TextBox Foreground="Black" Width="auto" Margin="0 10 0 0"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="6" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" >
+                    <Button Margin="0 0 0 0" Background="Gray">
+                        <WrapPanel>
+                            <materialDesign:PackIcon Kind="Broom" VerticalAlignment="Center" Margin="0 0 7 0"/>
+                            <TextBlock FontSize="14">Limpiar</TextBlock>
+                        </WrapPanel>
+                    </Button>
+                    <Button Margin="20 0 0 0">
+                        <WrapPanel>
+                            <materialDesign:PackIcon Kind="ContentSaveCheck" VerticalAlignment="Center" Margin="0 0 7 0"/>
+                            <TextBlock FontSize="14">Guardar</TextBlock>
+                        </WrapPanel>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 0" >
+                    <TextBlock  VerticalAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Verdana" >Los campos marcados con</TextBlock>
+                    <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
+                    <TextBlock  VerticalAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Verdana">son obligatorios</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+
+</Page>
