@@ -3,21 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Dashboard_WPF.Views.Compras" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Dashboard_WPF.Views.Compras" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:Icon="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Material"
       mc:Ignorable="d" 
       d:DesignHeight="420" d:DesignWidth="870"
       Title="SubVCompras1">
 
-    <Page.Resources>
-        <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
-            <Setter Property="Background" Value="#279EFF"/>
-            <!-- Cambia "ColorDeFondoDeseado" al color que desees -->
-            <Setter Property="Foreground" Value="White"/>
-            <!-- Cambia "Blanco" al color de fuente que desees -->
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        </Style>
 
-    </Page.Resources>
     <Grid Background="White" Height="420" Width="870" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="600"></ColumnDefinition>
@@ -44,16 +35,95 @@
                 </Button>
             </StackPanel>
             <StackPanel Grid.Row="1">
-                <DataGrid>
+                <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="#" Width="20" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Codigo de Barra" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Producto" Width="120" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Cantidad" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Precio" Width="60" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Subototal" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                        <DataGridTextColumn Header="Remover" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                      
+                        <DataGridTemplateColumn  Header="#" IsReadOnly="True" CanUserResize="False" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Codigo de Barra" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding CodigoBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Producto" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Producto}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Cantidad" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Cantidad}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="Precio" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding Precio}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn  Header="SubTotal" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
+                                            <TextBlock Text="{Binding SubTotal}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Remover" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="50" Height="35" CornerRadius="5" Margin="0 -10 0  0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2" >
+                                            <Button  Style="{StaticResource gridEditButton}" Background="Transparent">
+                                                <Icon:PackIconMaterial Kind="More" Height="25" Width="25"  Foreground="White" />
+                                            </Button>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
@@ -67,7 +137,7 @@
                 <RowDefinition Height="85"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">DATOS DE LA COMPRA</TextBlock>
-            
+
             <StackPanel Grid.Row="1" Margin="0 0 0 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  VerticalAlignment="Center" FontSize="10" Margin="10 0 0 0" FontFamily="Verdana">Fecha</TextBlock>
@@ -75,7 +145,7 @@
                 </StackPanel>
                 <DatePicker Width="250"></DatePicker>
             </StackPanel>
-            
+
             <StackPanel Grid.Row="2" Margin="0 0 0 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock  VerticalAlignment="Center" FontSize="10" Margin="10 0 0 0" FontFamily="Verdana">Proveedor</TextBlock>
@@ -104,8 +174,8 @@
                     <TextBlock  VerticalAlignment="Center" FontSize="10" Margin="0 0 0 0" FontFamily="Verdana">son obligatorios</TextBlock>
                 </StackPanel>
             </StackPanel>
-            
+
         </Grid>
     </Grid>
-    
+
 </Page>
