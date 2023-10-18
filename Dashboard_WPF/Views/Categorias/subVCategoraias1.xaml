@@ -44,7 +44,10 @@
                         <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Estado de la categoría</TextBlock>
                         <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
                     </StackPanel>
-                    <ComboBox x:Name="ComboEstado" Width="230" Margin="0 10 0 0" SelectedIndex="0">                        <ComboBoxItem>Habilitado</ComboBoxItem>                        <ComboBoxItem>Deshabilitado</ComboBoxItem>                    </ComboBox>
+                    <ComboBox x:Name="ComboEstado" Width="230" Margin="0 10 0 0" SelectedIndex="0">
+                        <ComboBoxItem>Habilitado</ComboBoxItem>
+                        <ComboBoxItem>Deshabilitado</ComboBoxItem>
+                    </ComboBox>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

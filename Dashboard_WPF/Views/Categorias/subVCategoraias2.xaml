@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Dashboard_WPF.Views.Categorias"
+      xmlns:local="clr-namespace:Dashboard_WPF.Views.Categorias" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
       d:DesignHeight="420" d:DesignWidth="870"
-      Title="subVCategoraias2">
+      Title="subVCategoraias2" Loaded="Page_Loaded">
 
 
     <Page.Resources>
@@ -21,15 +21,79 @@
     </Page.Resources>
 
     <Grid Background="White" Height="420" Width="870">
-        <DataGrid>
+        <DataGrid Name="tablaCategorias" AutoGenerateColumns="False" CanUserAddRows="False" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="#" Width="50" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Nombre" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Ubicación" Width="150" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Estado" Width="150" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Productos" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Actualizar" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Eliminar" Width="100" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTemplateColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Nombre" IsReadOnly="True" CanUserResize="False" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Nombre}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Ubicacion" IsReadOnly="True" CanUserResize="False" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Ubicacion}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Estado" IsReadOnly="True" CanUserResize="False" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Estado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Actualizar" IsReadOnly="True" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <Button x:Name="btnActualizar" Style="{StaticResource gridEditButton}" Background="Transparent" >
+                                        <Icon:PackIconMaterial Kind="Pencil" Height="25" Width="25"  Foreground="Green"/>
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Eliminar" IsReadOnly="True" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0  0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <Button Name="btnEliminar"  Style="{StaticResource gridEditButton}" Background="Transparent" >
+                                        <Icon:PackIconMaterial Kind="TrashCan" Height="25" Width="25"  Foreground="Red" />
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
