@@ -113,5 +113,27 @@ namespace Dashboard_WPF
         {
             MyFrame.NavigationService.Navigate(vpReportes);
         }
+
+        private void Tg_Btn_Checked(object sender, RoutedEventArgs e)
+        {
+            // Establecer el ancho de la primera columna en 65*
+            ColumnDefinition column0 = PaginaPrincipal.ColumnDefinitions[0];
+            column0.Width = new GridLength(200, GridUnitType.Star);
+
+            // Establecer el ancho de la segunda columna en 65*
+            ColumnDefinition column1 = PaginaPrincipal.ColumnDefinitions[1];
+            column1.Width = new GridLength(1050, GridUnitType.Star);
+        }
+
+        private void Tg_Btn_Unchecked(object sender, RoutedEventArgs e)
+        {
+            // Establecer el ancho de la primera columna en 230*
+            ColumnDefinition column0 = PaginaPrincipal.ColumnDefinitions[0];
+            column0.Width = new GridLength(95, GridUnitType.Star);
+
+            // Establecer el ancho de la segunda columna en 800*
+            ColumnDefinition column1 = PaginaPrincipal.ColumnDefinitions[1];
+            column1.Width = new GridLength(1050, GridUnitType.Star);
+        }
     }
 }

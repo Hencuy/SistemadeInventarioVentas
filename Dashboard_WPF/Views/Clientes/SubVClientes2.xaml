@@ -20,15 +20,31 @@
     </Page.Resources>
 
     <Grid Background="White" Height="420" Width="870">
-        <DataGrid>
+        <DataGrid x:Name="dataGridClientes" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="#" Width="40" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Documento" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Nombre" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Telefono" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Actualizar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
-                <DataGridTextColumn Header="Eliminar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}"/>
+                <DataGridTextColumn Header="#" Width="40" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Binding="{Binding Num}"/>
+                <DataGridTextColumn Header="Documento CI" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Binding="{Binding CI}"/>
+                <DataGridTextColumn Header="Nombre" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Binding="{Binding Nombres}"/>
+                <DataGridTextColumn Header="Apellidos" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}" Binding="{Binding Apellidos}"/>
+                <DataGridTemplateColumn Header="Actualizar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Actualizar" Click="ActualizarButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Columna de Eliminar con botón -->
+                <DataGridTemplateColumn Header="Eliminar" Width="*" HeaderStyle="{StaticResource DataGridColumnHeaderStyle}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Eliminar" Click="EliminarButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+
+
     </Grid>
 </Page>

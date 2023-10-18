@@ -16,10 +16,10 @@
         >
 
     <materialDesign:Card Background="{DynamicResource MaterialDesignPaper}" UniformCornerRadius="15" Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
-        <Grid>
+        <Grid x:Name="PaginaPrincipal">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="190"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="95"/>
+                <ColumnDefinition Width="1050"/>
 
             </Grid.ColumnDefinitions>
 
@@ -30,15 +30,25 @@
                         <TextBlock Text="Name" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0 0 0 0"/>
                         <TextBlock Text="Cargo" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0"/>
                     </StackPanel>
-
+                    <ToggleButton x:Name="Tg_Btn" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15"  Cursor="Hand" Checked="Tg_Btn_Checked" Unchecked="Tg_Btn_Unchecked">
+                        <WrapPanel Width="120">
+                            <materialDesign:PackIcon Kind="Defrost" VerticalAlignment="Center" Margin="0 0 20 0"/>
+                            <TextBlock>Menu</TextBlock>
+                        </WrapPanel>
+                    </ToggleButton>
                     <Button x:Name="btnDash" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnDash_Click" Cursor="Hand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Dashboard" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Home" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Dashboard</TextBlock>
                         </WrapPanel>
                     </Button>
-
                     <Button x:Name="btnCategorias" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnCategorias_Click" Cursor="Hand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Categorias" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Shape" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Categorias</TextBlock>
@@ -46,6 +56,9 @@
                     </Button>
 
                     <Button x:Name="btnProvee" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnProvee_Click" Cursor="Hand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Proveedores" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="TruckFast" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Proveedores</TextBlock>
@@ -53,6 +66,9 @@
                     </Button>
 
                     <Button x:Name="btnCompras" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnCompras_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Compras" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Cart" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Compras</TextBlock>
@@ -60,37 +76,55 @@
                     </Button>
 
                     <!--<Button x:Name="btnUsuarios" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnUsuarios_Click" Cursor="Hand">
-                        <WrapPanel Width="120">
+                    <Button.ToolTip>
+                        <ToolTip Content="Usuarios" Placement="Bottom"/>
+                        </Button.ToolTip>    
+                    <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Usuarios</TextBlock>
                         </WrapPanel>
                     </Button>-->
-                    
+
                     <Button x:Name="btnClientes" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnClientes_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Clientes" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="AccountGroup" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Clientes</TextBlock>
                         </WrapPanel>
                     </Button>
                     <Button x:Name="btnProductos" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnProductos_Click" Cursor="Hand">
+                        <Button.ToolTip>
+                            <ToolTip Content="Productos" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="PackageVariant" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Productos</TextBlock>
                         </WrapPanel>
                     </Button>
                     <Button x:Name="btnVentas" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnVentas_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Ventas" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="HandCoin" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Ventas</TextBlock>
                         </WrapPanel>
                     </Button>
                     <Button x:Name="btnKardex" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnKardex_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Kardex" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="TextBox" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Kardex</TextBlock>
                         </WrapPanel>
                     </Button>
                     <Button x:Name="btnReportes" Style="{StaticResource MaterialDesignFlatButton}" Foreground="{DynamicResource PrimaryHueLightForegroundBrush}" materialDesign:ButtonAssist.CornerRadius="6" Width="auto" Height="35" materialDesign:RippleAssist.Feedback="White" Margin="0 0 0 15" Click="btnReportes_Click">
+                        <Button.ToolTip>
+                            <ToolTip Content="Reportes" Placement="Bottom"/>
+                        </Button.ToolTip>
                         <WrapPanel Width="120">
                             <materialDesign:PackIcon Kind="File" VerticalAlignment="Center" Margin="0 0 20 0"/>
                             <TextBlock>Reportes</TextBlock>

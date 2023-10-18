@@ -32,7 +32,7 @@
                                 <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Número CI</TextBlock>
                                 <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
                             </StackPanel>
-                            <TextBox Foreground="Black" Width="auto" Margin="0 7 0 0"></TextBox>
+                            <TextBox x:Name="txtidCliente" Foreground="Black" Width="auto" Margin="0 7 0 0" PreviewTextInput="txtIdCliente_PreviewTextInput" KeyDown="txtIdCliente_KeyDown"></TextBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -45,7 +45,7 @@
                                 <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombres</TextBlock>
                                 <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
                             </StackPanel>
-                            <TextBox Foreground="Black" Width="auto" Margin="0 7 0 0"></TextBox>
+                            <TextBox x:Name="txtNombreCliente" Foreground="Black" Width="Auto" Margin="0 7 0 0" PreviewTextInput="txtNombreCliente_PreviewTextInput" LostFocus="txtNombreCliente_LostFocus"/>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
@@ -54,7 +54,7 @@
                                 <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Apellidos</TextBlock>
                                 <materialDesign:PackIcon Height="15" Width="15" Kind="Flag" VerticalAlignment="Center" Margin="0 0 0 0"/>
                             </StackPanel>
-                            <TextBox Foreground="Black" Width="auto" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtApellidosCliente" Foreground="Black" Width="auto" Margin="0 10 0 0" PreviewTextInput="txtApellidoCliente_PreviewTextInput" LostFocus="txtNombreCliente_LostFocus"></TextBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -66,16 +66,16 @@
 
             <StackPanel Grid.Row="2" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal" >
-                    <Button Margin="0 0 0 0" Background="Gray">
+                    <Button x:Name="btnlimpiar" Margin="0 0 0 0" Background="Gray" Click="btnlimpiar_Click">
                         <WrapPanel>
                             <materialDesign:PackIcon Kind="Broom" VerticalAlignment="Center" Margin="0 0 7 0"/>
                             <TextBlock FontSize="14">Limpiar</TextBlock>
                         </WrapPanel>
                     </Button>
-                    <Button Margin="20 0 0 0">
+                    <Button x:Name="btnGuardarClientes" Margin="20 0 0 0" Click="btnGuardarClientes_Click">
                         <WrapPanel>
                             <materialDesign:PackIcon Kind="ContentSaveCheck" VerticalAlignment="Center" Margin="0 0 7 0"/>
-                            <TextBlock FontSize="14">Guardar</TextBlock>
+                            <TextBlock  FontSize="14">Guardar</TextBlock>
                         </WrapPanel>
                     </Button>
                 </StackPanel>

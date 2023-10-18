@@ -188,6 +188,9 @@
     <Compile Include="Views\Clientes\SubVClientes3.xaml.cs">
       <DependentUpon>SubVClientes3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Clientes\SubVClientes4.xaml.cs">
+      <DependentUpon>SubVClientes4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Clientes\VPClientes.xaml.cs">
       <DependentUpon>VPClientes.xaml</DependentUpon>
     </Compile>
@@ -329,6 +332,10 @@
     <Page Include="Views\Clientes\SubVClientes3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Clientes\SubVClientes4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Clientes\VPClientes.xaml">
       <SubType>Designer</SubType>
