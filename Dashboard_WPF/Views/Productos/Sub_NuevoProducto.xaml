@@ -30,19 +30,13 @@
             <StackPanel Grid.Row="0" Orientation="Horizontal">
                 <materialDesign:PackIcon Height="35" Width="35
                                          " Kind="Barcode" VerticalAlignment="Center" Margin="7 0 0 0"/>
-                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Código y SKU</TextBlock>
+                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Código de barras</TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <StackPanel Margin="20 0 0 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Código de barras</TextBlock>
-                        <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="20 0 0 0">
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">SKU</TextBlock>
-                        <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
+                        <TextBox x:Name="txtCodigoBarras" Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -57,7 +51,7 @@
                     <StackPanel Margin="20 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Nombre</TextBlock>
-                            <TextBox Foreground="Black" Width="770" Margin="0 7 0 0"></TextBox>
+                            <TextBox x:Name="txtNombre" Foreground="Black" Width="770" Margin="0 7 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -67,19 +61,34 @@
                     <StackPanel Margin="0 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Stock o existencias</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtStockExistencia" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Stock mínimo</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtStockMinimo" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Presentacion del producto</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <ComboBox x:Name="ComboboxPresentacion" Width="230" Margin="0 10 0 0" SelectedIndex="0">
+                                <ComboBoxItem>Unidad</ComboBoxItem>
+                                <ComboBoxItem>Libra</ComboBoxItem>
+                                <ComboBoxItem>Kilogramo</ComboBoxItem>
+                                <ComboBoxItem>Caja</ComboBoxItem>
+                                <ComboBoxItem>Paquete</ComboBoxItem>
+                                <ComboBoxItem>Lata</ComboBoxItem>
+                                <ComboBoxItem>Galón</ComboBoxItem>
+                                <ComboBoxItem>Botella</ComboBoxItem>
+                                <ComboBoxItem>Tira</ComboBoxItem>
+                                <ComboBoxItem>Sobre</ComboBoxItem>
+                                <ComboBoxItem>Bolsa</ComboBoxItem>
+                                <ComboBoxItem>Saco</ComboBoxItem>
+                                <ComboBoxItem>Tarjeta</ComboBoxItem>
+                                <ComboBoxItem>Otro</ComboBoxItem>
+                            </ComboBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -89,19 +98,19 @@
                     <StackPanel Margin="0 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Precio de compra</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtPrecioCompra" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Precio de venta</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtPrecioVenta" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Precio de venta por mayoreo</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <TextBox x:Name="txtPrecioMayoreo" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -111,19 +120,19 @@
                     <StackPanel Margin="0 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Descuento (%) en venta</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtDescuento" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Marca</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
+                            <TextBox x:Name="txtMarca" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Modelo</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <TextBox x:Name="txtModelo" Foreground="Black" Width="230" Margin="0 10 0 0"></TextBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
@@ -137,84 +146,66 @@
                 <StackPanel Orientation="Horizontal" Margin="60,30,20,0">
                     <StackPanel Margin="0 0 0 0">
                         <StackPanel Orientation="Vertical">
-                            <CheckBox>Si vence</CheckBox>
-                            <CheckBox>No vence</CheckBox>
+                            <StackPanel>
+                                <CheckBox Content="Si vence" Name="siVenceCheckBox" Checked="CheckBox_Checked" />
+                                <CheckBox Content="No vence" Name="noVenceCheckBox" Checked="CheckBox_Checked" />
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="200 0 0 0">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Fecha de vencimiento:</TextBlock>
-                            <TextBox Foreground="Black" Width="230" Margin="10 0 0 0"></TextBox>
+                            <DatePicker x:Name="dpFechaVencimiento" Margin="10 0 0 0" DisplayDateStart="2023-01-01" DisplayDateEnd="2030-12-31" />
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="6" Orientation="Horizontal">
-                <materialDesign:PackIcon Height="35" Width="35" Kind="Restart" VerticalAlignment="Center" Margin="7 0 0 0"/>
-                <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Garantía de fábrica</TextBlock>
-            </StackPanel>
-            <StackPanel Grid.Row="7">
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="20 0 0 0">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Unidad de tiempo</TextBlock>
-                            <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="90 0 0 0">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Tiempo de garantía</TextBlock>
-                            <TextBox Foreground="Black" Width="260" Margin="0 7 0 0"></TextBox>
-                        </StackPanel>
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Grid.Row="8" Orientation="Horizontal">
                 <materialDesign:PackIcon Height="35" Width="35" Kind="Store" VerticalAlignment="Center" Margin="7 0 0 0"/>
                 <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Proveedor, categoría y estado</TextBlock>
             </StackPanel>
-            <StackPanel Grid.Row="9">
+            <StackPanel Grid.Row="7">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
                     <StackPanel Margin="0 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Proveedor</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <ComboBox x:Name="ComboboxProveedor" Width="230" Margin="0 10 0 0" SelectedIndex="0"></ComboBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Categoría</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <ComboBox x:Name="ComboboxCategoria" Width="230" Margin="0 10 0 0" SelectedIndex="0"></ComboBox>
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="40 0 0 0">
                         <StackPanel Orientation="Vertical">
                             <TextBlock  VerticalAlignment="Center" FontSize="15" Margin="0 0 0 0" FontFamily="Verdana">Estado del producto</TextBlock>
-                            <ComboBox Width="230" Margin="0 10 0 0"></ComboBox>
+                            <ComboBox x:Name="ComboEstado" Width="230" Margin="0 10 0 0" SelectedIndex="0">                                <ComboBoxItem>Habilitado</ComboBoxItem>                                <ComboBoxItem>Deshabilitado</ComboBoxItem>                            </ComboBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="10" Orientation="Horizontal">
+            <StackPanel Grid.Row="8" Orientation="Horizontal">
                 <materialDesign:PackIcon Height="35" Width="35" Kind="ImageAddOutline" VerticalAlignment="Center" Margin="7 0 0 0"/>
                 <TextBlock  VerticalAlignment="Center" FontSize="23" Margin="10 0 0 0" FontFamily="Verdana">Foto o imagen del producto</TextBlock>
             </StackPanel>
-            <StackPanel Grid.Row="11" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Button Margin="15 0 0 0" Background="Gray">
+            <StackPanel Grid.Row="9" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button x:Name="btnSelecImage" Margin="15 0 0 0" Background="Gray" Click="btnSelecImage_Click">
                     <WrapPanel>
-                        <TextBlock FontSize="14">Seleccionar archivo</TextBlock>
+                        <TextBlock x:Name="nombreArchivo" FontSize="14">Seleccionar archivo</TextBlock>
                     </WrapPanel>
                 </Button>
             </StackPanel>
-            <StackPanel Grid.Row="12" HorizontalAlignment="Center">
+            <StackPanel Grid.Row="10" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal" >
-                    <Button Margin="0 0 0 0" Background="Gray">
+                    <Button x:Name="btnLimpiar" Margin="0 0 0 0" Background="Gray" Click="btnLimpiar_Click">
                         <WrapPanel>
                             <materialDesign:PackIcon Kind="Broom" VerticalAlignment="Center" Margin="0 0 7 0"/>
                             <TextBlock FontSize="14">Limpiar</TextBlock>
                         </WrapPanel>
                     </Button>
-                    <Button Margin="20 0 0 0">
+                    <Button x:Name="btnGuardar" Margin="20 0 0 0" Click="btnGuardar_Click">
                         <WrapPanel>
                             <materialDesign:PackIcon Kind="ContentSaveCheck" VerticalAlignment="Center" Margin="0 0 7 0"/>
                             <TextBlock FontSize="14">Guardar</TextBlock>
