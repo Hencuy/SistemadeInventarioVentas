@@ -25,25 +25,25 @@
                 </Button>
                 <Button x:Name="btnEnAlmacen" Cursor="Hand" Height="25" Width="125" Margin="0,0,10,0" Click="btnEnAlmacen_Click">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/almacen2.png"></Image>
+                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/Imagenes/almacen2.png"></Image>
                         <TextBlock FontSize="10" Margin="4,0,-16,0">En almacén</TextBlock>
                     </Grid>
                 </Button>
                 <Button x:Name="btnMasVendidos" Cursor="Hand" Height="25" Width="125" Margin="0,0,10,0" Click="btnMasVendidos_Click">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/mejor-vendido.png"></Image>
+                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/Imagenes/mejor-vendido.png"></Image>
                         <TextBlock FontSize="10" Margin="4,0,-16,0">Más vendidos</TextBlock>
                     </Grid>
                 </Button>
                 <Button x:Name="btnPorCategoria" Cursor="Hand" Height="25" Width="125" Margin="0,0,10,0" Click="btnPorCategoria_Click">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/categorias.png"></Image>
+                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/Imagenes/categorias.png"></Image>
                         <TextBlock FontSize="10" Margin="4,0,-16,0">Por categoría</TextBlock>
                     </Grid>
                 </Button>
                 <Button x:Name="btnPorVencimiento" Cursor="Hand" Height="25" Width="125" Margin="0,0,10,0" Click="btnPorVencimiento_Click">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/fecha-de-vencimiento.png"></Image>
+                        <Image Height="15" Width="15" VerticalAlignment="Center" Margin="-64,0,0,0" Source="/Views/Productos/Imagenes/fecha-de-vencimiento.png"></Image>
                         <TextBlock FontSize="10" Margin="15,0,-16,0">Por vencimiento</TextBlock>
                     </Grid>
                 </Button>

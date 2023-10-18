@@ -33,7 +33,6 @@ namespace Dashboard_WPF.Views.Productos
         public VPProductos()
         {
             InitializeComponent();
-            FrameProductos.NavigationService.Navigate(nuevoProducto);
         }
 
         private void btnNuevoProducto_Click(object sender, RoutedEventArgs e)
