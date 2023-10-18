@@ -24,7 +24,7 @@ namespace Dashboard_WPF.Views.Productos
     public partial class VPProductos : Page
     {
         Sub_BuscarProducto buscarProducto = new Sub_BuscarProducto();
-        Sub_EnAlmacen enAlmacen = new Sub_EnAlmacen();
+        
         Sub_MasVendido masVendido = new Sub_MasVendido();
         Sub_NuevoProducto nuevoProducto = new Sub_NuevoProducto();
         Sub_PorCategorias porCategorias = new Sub_PorCategorias();
@@ -42,6 +42,7 @@ namespace Dashboard_WPF.Views.Productos
 
         private void btnEnAlmacen_Click(object sender, RoutedEventArgs e)
         {
+            Sub_EnAlmacen enAlmacen = new Sub_EnAlmacen();
             FrameProductos.NavigationService.Navigate(enAlmacen);
         }
 
