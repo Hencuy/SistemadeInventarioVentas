@@ -1275,3 +1275,6 @@ C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\D
 C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes2.baml
 C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Reportes\SubVReportes3.baml
 C:\Users\antou\source\repos\Hencuy\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Proveedores\ActualizarProvee.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\edu79\Source\Repos\SistemadeInventarioVentas\Dashboard_WPF\obj\Debug\Views\Proveedores\ActualizarProvee.baml

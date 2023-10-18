@@ -17,6 +17,7 @@ using Dashboard_WPF.Modelos;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
+using Dashboard_WPF.Views.Productos;
 
 namespace Dashboard_WPF.Views.Ventas
 {
@@ -387,6 +388,11 @@ namespace Dashboard_WPF.Views.Ventas
                 string codigoBarras = producto.CodigoBarra;
                 int cantidad = producto.Cantidad;
 
+                long precioCompra = 0;
+                long precioVenta = 0;
+                long precioMayoreo = 0;
+                int stockExistencia = 0;
+
                 // Realizar una consulta para obtener los datos de Producto
                 using (SqlConnection conexion = Conexion.getInstancia().CrearConexion())
                 {
@@ -400,43 +406,49 @@ namespace Dashboard_WPF.Views.Ventas
                     {
                         if (reader.Read())
                         {
-                            long precioCompra = reader.GetInt64(reader.GetOrdinal("PrecioCompra"));
-                            long precioVenta = reader.GetInt64(reader.GetOrdinal("PrecioVenta"));
-                            long precioMayoreo = reader.GetInt64(reader.GetOrdinal("PrecioMayoreo"));
-                            int stockExistencia = reader.GetInt32(reader.GetOrdinal("StockExistencia"));
-
-                            // Insertar en ProductosVenta
-                            using (SqlConnection conexionVenta = Conexion.getInstancia().CrearConexion())
-                            {
-                                conexionVenta.Open();
-
-                                string consultaVenta = "INSERT INTO ProductosVenta (idDetallesVenta, PrecioCompra, PrecioVenta, PrecioMayoreo, StockSalida) " +
-                                    "VALUES (@IdDetallesVenta, @PrecioCompra, @PrecioVenta, @PrecioMayoreo, @StockSalida)";
-
-                                SqlCommand comandoVenta = new SqlCommand(consultaVenta, conexionVenta);
-                                comandoVenta.Parameters.AddWithValue("@IdDetallesVenta", idDetallesVenta);
-                                comandoVenta.Parameters.AddWithValue("@PrecioCompra", precioCompra);
-                                comandoVenta.Parameters.AddWithValue("@PrecioVenta", precioVenta);
-                                comandoVenta.Parameters.AddWithValue("@PrecioMayoreo", precioMayoreo);
-                                comandoVenta.Parameters.AddWithValue("@StockSalida", cantidad);
-
-                                comandoVenta.ExecuteNonQuery();
-                            }
-
-                            // Actualizar StockExistencia en Producto
-                            stockExistencia -= cantidad;
-
-                            string consultaActualizarStock = "UPDATE Producto SET StockExistencia = @StockExistencia WHERE CodigoBarra = @CodigoBarra";
-                            SqlCommand comandoActualizarStock = new SqlCommand(consultaActualizarStock, conexion);
-                            comandoActualizarStock.Parameters.AddWithValue("@StockExistencia", stockExistencia);
-                            comandoActualizarStock.Parameters.AddWithValue("@CodigoBarra", codigoBarras);
-                            comandoActualizarStock.ExecuteNonQuery();
+                            precioCompra = reader.GetInt64(reader.GetOrdinal("PrecioCompra"));
+                            precioVenta = reader.GetInt64(reader.GetOrdinal("PrecioVenta"));
+                            precioMayoreo = reader.GetInt64(reader.GetOrdinal("PrecioMayoreo"));
+                            stockExistencia = reader.GetInt32(reader.GetOrdinal("StockExistencia"));
                         }
+
+                        // Importante: Cerrar el DataReader
+                        reader.Close();
                     }
+
+                    // Insertar en ProductosVenta
+                    using (SqlConnection conexionVenta = Conexion.getInstancia().CrearConexion())
+                    {
+                        conexionVenta.Open();
+
+                        // Consulta de inserción en ProductosVenta con idProducto
+                        string consultaVenta = "INSERT INTO ProductosVenta (idDetallesVenta, idProducto, PrecioCompra, PrecioVenta, PrecioMayoreo, StockSalida) " +
+                            "VALUES (@IdDetallesVenta, @IdProducto, @PrecioCompra, @PrecioVenta, @PrecioMayoreo, @StockSalida)";
+
+                        SqlCommand comandoVenta = new SqlCommand(consultaVenta, conexionVenta);
+                        comandoVenta.Parameters.AddWithValue("@IdDetallesVenta", idDetallesVenta);
+                        comandoVenta.Parameters.AddWithValue("@IdProducto", codigoBarras); // Agregar idProducto
+                        comandoVenta.Parameters.AddWithValue("@PrecioCompra", precioCompra);
+                        comandoVenta.Parameters.AddWithValue("@PrecioVenta", precioVenta);
+                        comandoVenta.Parameters.AddWithValue("@PrecioMayoreo", precioMayoreo);
+                        comandoVenta.Parameters.AddWithValue("@StockSalida", cantidad);
+
+                        comandoVenta.ExecuteNonQuery();
+                    }
+
+                    // Actualizar StockExistencia en Producto
+                    stockExistencia -= cantidad;
+
+                    string consultaActualizarStock = "UPDATE Producto SET StockExistencia = @StockExistencia WHERE CodigoBarra = @CodigoBarra";
+                    SqlCommand comandoActualizarStock = new SqlCommand(consultaActualizarStock, conexion);
+                    comandoActualizarStock.Parameters.AddWithValue("@StockExistencia", stockExistencia);
+                    comandoActualizarStock.Parameters.AddWithValue("@CodigoBarra", codigoBarras);
+                    comandoActualizarStock.ExecuteNonQuery();
                 }
             }
 
             MessageBox.Show("Venta guardada exitosamente.");
+
         }
 
     }
