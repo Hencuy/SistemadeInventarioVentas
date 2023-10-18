@@ -6,7 +6,7 @@
        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" 
       xmlns:local="clr-namespace:Dashboard_WPF.Views.Productos"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="880"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="Sub_EnAlmacen">
     <Page.Resources>
         <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
@@ -14,100 +14,120 @@
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
+        <local:ImageConverter x:Key="ImageConverter"/>
     </Page.Resources>
 
-    <Grid Background="White" Height="420" Width="870">
-        <DataGrid x:Name="membersDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}">
+
+    <Grid Background="White" Height="420" Width="800">
+        <DataGrid x:Name="EnAlmacen" AutoGenerateColumns="False" CanUserAddRows="False" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}">
             <DataGrid.Columns>
-                <DataGridTemplateColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto">
+                <DataGridTemplateColumn Header="Foto" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <Image Width="50" Height="50">
+                                <Image.Source>
+                                    <Binding Path="Foto" Converter="{StaticResource ImageConverter}" />
+                                </Image.Source>
+                            </Image>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="NIT" IsReadOnly="True" CanUserResize="False" Width="auto">
+
+                <DataGridTemplateColumn Header="Código de Barra" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding NIT}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding CodigoBarra}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Nombre Compañia" IsReadOnly="True" CanUserResize="False" Width="auto">
+                <DataGridTemplateColumn Header="Nombre" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding NombreCompañia}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding Nombre}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Telefono Encargado" IsReadOnly="True" CanUserResize="False" Width="auto">
+                <DataGridTemplateColumn Header="Presentación" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding TelefonoEncargado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding Presentacion}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Email" IsReadOnly="True" CanUserResize="False" Width="auto">
+                <DataGridTemplateColumn Header="Marca" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding Email}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding Marca}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Estado" IsReadOnly="True" CanUserResize="False" Width="auto">
+                <DataGridTemplateColumn Header="Modelo" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <TextBlock Text="{Binding Estado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding Modelo}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Actualizar" IsReadOnly="True" Width="auto">
+                <DataGridTemplateColumn Header="Stock en Existencia" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <Button x:Name="btnActualizar" Style="{StaticResource gridEditButton}" Background="Transparent" Click="btnActualizar_Click">
-                                        <Icon:PackIconMaterial Kind="Pencil" Height="25" Width="25"  Foreground="Green"/>
-                                    </Button>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding StockExistencia}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Eliminar" IsReadOnly="True" Width="auto">
+                <DataGridTemplateColumn Header="Stock Mínimo" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0  0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
-                                    <Button Name="btnEliminar"  Style="{StaticResource gridEditButton}" Background="Transparent" Click="btnEliminar_Click">
-                                        <Icon:PackIconMaterial Kind="TrashCan" Height="25" Width="25"  Foreground="Red" />
-                                    </Button>
-                                </Border>
-                            </StackPanel>
+                            <TextBlock Text="{Binding StockMinimo}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Precio de Compra" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding PrecioCompra}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Precio de Venta" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding PrecioVenta}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Precio al Mayoreo" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding PrecioMayoreo}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Descuento" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Descuento}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Tiene Vencimiento" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding TieneVencimiento}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Fecha de Vencimiento" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FechaVencimiento}" Foreground="Black"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Estado" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Estado}" Foreground="Black"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

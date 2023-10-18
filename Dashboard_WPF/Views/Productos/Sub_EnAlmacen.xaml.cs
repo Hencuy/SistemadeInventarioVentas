@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,121 +21,109 @@ using System.Windows.Shapes;
 
 namespace Dashboard_WPF.Views.Productos
 {
-    public partial class Sub_EnAlmacen : Page
+    public class Producto
     {
-        SqlConnection conexion = new SqlConnection("Server= (LocalDB)\\MSSQLLocalDB;Database=BDInventarioVenta;Integrated Security=true; TrustServerCertificate=True");
-        public Sub_EnAlmacen()
-        {
-            InitializeComponent();
-            CargarTabla();
-        }
+        public long CodigoBarra { get; set; }
+        public string Nombre { get; set; }
+        public string Presentacion { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public int StockExistencia { get; set; }
+        public int StockMinimo { get; set; }
+        public long PrecioCompra { get; set; }
+        public long PrecioVenta { get; set; }
+        public long PrecioMayoreo { get; set; }
+        public long Descuento { get; set; }
+        public bool TieneVencimiento { get; set; }
+        public DateTime? FechaVencimiento { get; set; }
+        public int Estado { get; set; }
+        public byte[] Foto { get; set; }
+        public long idProveedor { get; set; }
+        public int idCategoria { get; set; }
+    }
 
-        private void CargarTabla()
-        {
-            string consulta = "SELECT NIT, NombreCompañia, NombreEncargado, Estado, TelefonoEncargado, Direccion, Email FROM Proveedor";
-
-            conexion.Open();
-            SqlCommand command = new SqlCommand(consulta, conexion);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            System.Data.DataTable dataTable = new System.Data.DataTable();
-
-
-            dataAdapter.Fill(dataTable);
-            dataTable.Columns.Add("Number", typeof(int));
-
-            for (int i = 0; i < dataTable.Rows.Count; i++)
-            {
-                dataTable.Rows[i]["Number"] = i + 1;
-
-            }
-            // Agregar columna de enumeración
-
-
-            membersDataGrid.ItemsSource = dataTable.DefaultView;
-
-            conexion.Close();
-        }
-
-        private void btnActualizar_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
-        {
-            string nit;
-            // Obtén el botón que se hizo clic
-            Button button = (Button)sender;
-
-            // Obtén la fila que contiene el botón
-            DataGridRow dataGridRow = FindParent<DataGridRow>(button);
-
-            // Verifica si la fila no es nula
-            if (dataGridRow != null)
-            {
-                // Obtén el objeto de datos de la fila seleccionada
-                DataRowView rowView = (DataRowView)dataGridRow.Item;
-
-                // Accede al valor del campo "CODIGO HOJA DE RUTA" (ID_Tramites)
-                nit = rowView["NIT"].ToString();
-
-                CambiarEstadoProveedor(nit);
-                CargarTabla();
-
-
-            }
-        }
-
-        private void CambiarEstadoProveedor(string nit)
+    public class ImageConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             try
             {
-                // Abre la conexión a la base de datos
-                conexion.Open();
-
-                // Consulta SQL para actualizar el estado del proveedor
-                string consulta = "UPDATE Proveedor SET Estado = 0 WHERE NIT = @NIT";
-
-                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                if (value is byte[] bytes && bytes.Length > 0)
                 {
-                    // Agrega el parámetro NIT a la consulta SQL
-                    comando.Parameters.AddWithValue("@NIT", nit);
-
-                    // Ejecuta la consulta
-                    int filasAfectadas = comando.ExecuteNonQuery();
-
-                    // Verifica si se actualizó al menos una fila
-                    if (filasAfectadas > 0)
-                    {
-                        MessageBox.Show("Proveedor Eliminado correctamente.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo eliminar al proveedor.");
-                    }
+                    var imageStream = new MemoryStream(bytes);
+                    var bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmapImage.StreamSource = imageStream;
+                    bitmapImage.EndInit();
+                    return bitmapImage;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cambiar el estado del proveedor: " + ex.Message);
+                
             }
-            finally
-            {
-                // Cierra la conexión a la base de datos
-                conexion.Close();
-            }
+
+            var genericImage = new BitmapImage(new Uri("/Views/Productos/Imagenes/default.png", UriKind.Relative));
+            return genericImage;
         }
 
-        private T FindParent<T>(DependencyObject child) where T : DependencyObject
+
+
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            DependencyObject parent = VisualTreeHelper.GetParent(child);
+            throw new NotImplementedException();
+        }
+    }
 
-            while (parent != null && !(parent is T))
+
+    public partial class Sub_EnAlmacen : Page
+    {
+        private List<Producto> productos = new List<Producto>();
+        SqlConnection conexion = new SqlConnection("Server= (LocalDB)\\MSSQLLocalDB;Database=BDInventarioVenta;Integrated Security=true; TrustServerCertificate=True");
+        public Sub_EnAlmacen()
+        {
+            InitializeComponent();
+            CargarDatos();
+            EnAlmacen.ItemsSource = productos;
+        }
+
+        private void CargarDatos()
+        {
+            // Asegúrate de tener una lista de productos llamada "productos" declarada en el ámbito más amplio de tu aplicación.
+            conexion.Open();
+            string consulta = "SELECT * FROM Producto WHERE StockExistencia > 0";
+            using (SqlCommand command = new SqlCommand(consulta, conexion))
             {
-                parent = VisualTreeHelper.GetParent(parent);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Producto producto = new Producto
+                        {
+                            CodigoBarra = (long)reader["CodigoBarra"],
+                            Nombre = reader["Nombre"].ToString(),
+                            Presentacion = reader["Presentacion"].ToString(),
+                            Marca = reader["Marca"].ToString(),
+                            Modelo = reader["Modelo"].ToString(),
+                            StockExistencia = (int)reader["StockExistencia"],
+                            StockMinimo = (int)reader["StockMinimo"],
+                            PrecioCompra = (long)reader["PrecioCompra"],
+                            PrecioVenta = (long)reader["PrecioVenta"],
+                            PrecioMayoreo = (long)reader["PrecioMayoreo"],
+                            Descuento = (long)reader["Descuento"],
+                            TieneVencimiento = (bool)reader["TieneVencimiento"],
+                            FechaVencimiento = reader["FechaVencimiento"] as DateTime?,
+                            Estado = (int)reader["Estado"],
+                            Foto = reader["Foto"] as byte[],
+                            idProveedor = (long)reader["idProveedor"],
+                            idCategoria = (int)reader["idCategoria"]
+                        };
+                        productos.Add(producto);
+                    }
+                }
             }
-
-            return parent as T;
         }
     }
 }

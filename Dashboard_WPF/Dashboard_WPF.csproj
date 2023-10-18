@@ -504,7 +504,9 @@
   <ItemGroup>
     <Resource Include="images\iconoUser.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\Productos\Imagenes\default.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Productos\Imagenes\almacen.png" />
     <Resource Include="Views\Productos\Imagenes\almacen2.png" />
