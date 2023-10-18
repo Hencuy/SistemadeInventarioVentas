@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -20,9 +21,6 @@ using System.Windows.Shapes;
 
 namespace Dashboard_WPF.Views.Productos
 {
-    /// <summary>
-    /// Lógica de interacción para Sub_NuevoProducto.xaml
-    /// </summary>
     public partial class Sub_NuevoProducto : Page
     {
         long CodigoDeBarras = 0;
@@ -108,6 +106,45 @@ namespace Dashboard_WPF.Views.Productos
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
+            SacarDatos();
+
+            conexion.Open();
+            string sqlQuery = "INSERT INTO Producto VALUES (@CodigoBarra, @Nombre, @Presentacion, @Marca, @Modelo, @StockExistencia, @StockMinimo, @PrecioCompra, @PrecioVenta, @PrecioMayoreo, @Descuento, @TieneVencimiento, @FechaVencimiento, @Estado, @fileBytes, @IdProveedor, @IdCategoria);";
+
+            SqlCommand command = new SqlCommand(sqlQuery, conexion);
+            command.Parameters.AddWithValue("@CodigoBarra", CodigoDeBarras);
+            command.Parameters.AddWithValue("@Nombre", Nombre);
+            command.Parameters.AddWithValue("@Presentacion", Presentacion);
+            command.Parameters.AddWithValue("@Marca", Marca);
+            command.Parameters.AddWithValue("@Modelo", Modelo);
+            command.Parameters.AddWithValue("@StockExistencia", StockExistencia);
+            command.Parameters.AddWithValue("@StockMinimo", StockMinimo);
+            command.Parameters.AddWithValue("@PrecioCompra", PrecioCompra);
+            command.Parameters.AddWithValue("@PrecioVenta", PrecioVenta);
+            command.Parameters.AddWithValue("@PrecioMayoreo", PrecioMayoreo);
+            command.Parameters.AddWithValue("@Descuento", Descuento);
+            command.Parameters.AddWithValue("@TieneVencimiento", TieneVencimiento);
+            command.Parameters.Add("@FechaVencimiento", SqlDbType.DateTime).Value = (object)fechaVencimiento ?? DBNull.Value;
+            command.Parameters.AddWithValue("@Estado", Estado);
+
+            if (fileBytes == null || fileBytes.Length == 0)
+            {
+                fileBytes = new byte[0];
+            }
+
+            command.Parameters.AddWithValue("@fileBytes", fileBytes);
+            command.Parameters.AddWithValue("@IdProveedor", IdProveedor);
+            command.Parameters.AddWithValue("@IdCategoria", IdCategoria);
+            command.ExecuteNonQuery();
+            conexion.Close();
+
+            MessageBox.Show("Se ha guardado el producto");
+
+            LimpiarXD();
+        }
+
+        private void SacarDatos()
+        {
             CodigoDeBarras = Convert.ToInt64(txtCodigoBarras.Text);
             Nombre = txtNombre.Text;
 
@@ -119,7 +156,7 @@ namespace Dashboard_WPF.Views.Productos
 
             Marca = txtMarca.Text;
             Modelo = txtModelo.Text;
-            StockExistencia = Convert.ToInt32(txtStockExistencia.Text); ;
+            StockExistencia = Convert.ToInt32(txtStockExistencia.Text);
             StockMinimo = Convert.ToInt32(txtStockMinimo.Text);
             PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
             PrecioVenta = Convert.ToInt32(txtPrecioVenta.Text);
@@ -129,7 +166,7 @@ namespace Dashboard_WPF.Views.Productos
             if (siVenceCheckBox.IsChecked == true)
             {
                 TieneVencimiento = true;
-                fechaVencimiento = dpFechaVencimiento.SelectedDate ?? DateTime.MinValue;
+                fechaVencimiento = dpFechaVencimiento.SelectedDate;
             }
             else if (noVenceCheckBox.IsChecked == true)
             {
@@ -171,39 +208,25 @@ namespace Dashboard_WPF.Views.Productos
                     IdCategoria = idCategoria;
                 }
             }
-
-            conexion.Open();
-            string sqlQuery = "INSERT INTO Producto VALUES (@CodigoBarra, @Nombre, @Presentacion, @Marca, @Modelo, @StockExistencia, @StockMinimo, @PrecioCompra, @PrecioVenta, @PrecioMayoreo, @Descuento, @TieneVencimiento, @FechaVencimiento, @Estado, @fileBytes, @IdProveedor, @IdCategoria);";
-
-            SqlCommand command = new SqlCommand(sqlQuery, conexion);
-            command.Parameters.AddWithValue("@CodigoBarra", CodigoDeBarras);
-            command.Parameters.AddWithValue("@Nombre", Nombre);
-            command.Parameters.AddWithValue("@Presentacion", Presentacion);
-            command.Parameters.AddWithValue("@Marca", Marca);
-            command.Parameters.AddWithValue("@Modelo", Modelo);
-            command.Parameters.AddWithValue("@StockExistencia", StockExistencia);
-            command.Parameters.AddWithValue("@StockMinimo", StockMinimo);
-            command.Parameters.AddWithValue("@PrecioCompra", PrecioCompra);
-            command.Parameters.AddWithValue("@PrecioVenta", PrecioVenta);
-            command.Parameters.AddWithValue("@PrecioMayoreo", PrecioMayoreo);
-            command.Parameters.AddWithValue("@Descuento", Descuento);
-            command.Parameters.AddWithValue("@TieneVencimiento", TieneVencimiento);
-            command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
-            command.Parameters.AddWithValue("@Estado", Estado);
-            if (fileBytes == null || fileBytes.Length == 0)
-            {
-                fileBytes = new byte[0];
-            }
-            command.Parameters.AddWithValue("@fileBytes", fileBytes);
-            command.Parameters.AddWithValue("@IdProveedor", IdProveedor);
-            command.Parameters.AddWithValue("@IdCategoria", IdCategoria);
-            command.ExecuteNonQuery();
-            conexion.Close();
         }
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
+            LimpiarXD();
+        }
 
+        private void LimpiarXD()
+        {
+            txtCodigoBarras.Text = "";
+            txtNombre.Text = "";
+            txtMarca.Text = "";
+            txtModelo.Text = "";
+            txtStockExistencia.Text = "";
+            txtStockMinimo.Text = "";
+            txtPrecioCompra.Text = "";
+            txtPrecioVenta.Text = "";
+            txtPrecioMayoreo.Text = "";
+            txtDescuento.Text = "";
         }
 
         private void btnSelecImage_Click(object sender, RoutedEventArgs e)
