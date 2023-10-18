@@ -22,7 +22,7 @@ namespace Dashboard_WPF.Views.Proveedores
     public partial class VPProveedores : Page
     {
         SubVProveedores1 subVProveedores1 = new SubVProveedores1();
-        SubVProveedores2 subVProveedores2 = new SubVProveedores2();
+       
         SubVProveedores3 subVProveedores3 = new SubVProveedores3();
         public VPProveedores()
         {
@@ -37,7 +37,7 @@ namespace Dashboard_WPF.Views.Proveedores
 
         private void btnListaProvee_Click(object sender, RoutedEventArgs e)
         {
-            FrameProveedores.NavigationService.Navigate(subVProveedores2);
+            FrameProveedores.NavigationService.Navigate(new SubVProveedores2(FrameProveedores));
         }
 
         private void btnBuscarProvee_Click(object sender, RoutedEventArgs e)

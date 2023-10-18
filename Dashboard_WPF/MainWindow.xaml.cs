@@ -42,7 +42,7 @@ namespace Dashboard_WPF
         VPReportes vpReportes = new VPReportes();
         VPUsuarios vpUsuarios = new VPUsuarios();
         VPVentas vpVentas = new VPVentas();
-        
+
         public MainWindow()
         {
             InitializeComponent();

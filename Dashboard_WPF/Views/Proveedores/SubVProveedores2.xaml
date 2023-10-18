@@ -7,82 +7,79 @@
       xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" 
       mc:Ignorable="d" 
       d:DesignHeight="420" d:DesignWidth="870"
-      Title="SubVProveedores2">
+      Title="SubVProveedores2" Loaded="Page_Loaded">
     <Page.Resources>
         <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="Background" Value="#2D4356"/>
-            <!-- Cambia "ColorDeFondoDeseado" al color que desees -->
             <Setter Property="Foreground" Value="White"/>
-            <!-- Cambia "Blanco" al color de fuente que desees -->
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
-
     </Page.Resources>
 
     <Grid Background="White" Height="420" Width="870">
-        <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}">
+        <DataGrid x:Name="membersDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}">
             <DataGrid.Columns>
-                <DataGridTemplateColumn  Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn  Header="Documento" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="NIT" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Documento}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding NIT}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn  Header="Nombre" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="Nombre Compañia" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Nombre}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding NombreCompañia}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn  Header="Telefono" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="Telefono Encargado" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Telefono}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding TelefonoEncargado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn  Header="Email" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="Email" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Email}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Email}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn  Header="Estado" IsReadOnly="True" CanUserResize="False" Width="auto"  >
+                <DataGridTemplateColumn Header="Estado" IsReadOnly="True" CanUserResize="False" Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="25" Height="35" CornerRadius="3" Margin="0 -15 0 0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2">
-                                    <TextBlock Text="{Binding Estado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                                <Border Width="auto" Height="auto" CornerRadius="3" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <TextBlock Text="{Binding Estado}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black"/>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
@@ -92,9 +89,9 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="50" Height="35" CornerRadius="5" Margin="0 -10 0  0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2" >
-                                    <Button  Style="{StaticResource gridEditButton}" Background="Transparent" >
-                                        <Icon:PackIconMaterial Kind="More" Height="25" Width="25"  Foreground="White" />
+                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0 0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <Button x:Name="btnActualizar" Style="{StaticResource gridEditButton}" Background="Transparent" Click="btnActualizar_Click">
+                                        <Icon:PackIconMaterial Kind="Pencil" Height="25" Width="25"  Foreground="Green"/>
                                     </Button>
                                 </Border>
                             </StackPanel>
@@ -105,16 +102,15 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Border Width="50" Height="35" CornerRadius="5" Margin="0 -10 0  0" Background="#44546A" BorderBrush="#7030A0" BorderThickness="2" >
-                                    <Button  Style="{StaticResource gridEditButton}" Background="Transparent" >
-                                        <Icon:PackIconMaterial Kind="More" Height="25" Width="25"  Foreground="White" />
+                                <Border Width="auto" Height="auto" CornerRadius="5" Margin="0 0 0  0" Background="Transparent" BorderBrush="Transparent" BorderThickness="2">
+                                    <Button Name="btnEliminar"  Style="{StaticResource gridEditButton}" Background="Transparent" Click="btnEliminar_Click">
+                                        <Icon:PackIconMaterial Kind="TrashCan" Height="25" Width="25"  Foreground="Red" />
                                     </Button>
                                 </Border>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
